@@ -1,0 +1,62 @@
+[project]
+name = "pilllows-uploader"
+description = "Bulk upload files to pillows.su via the chunked upload API"
+dynamic = ["version"]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.28.0",
+    "tqdm>=4.66.0",
+    'tomli>=1.0.0; python_version < "3.11"',
+]
+
+[project.scripts]
+pillows-upload = "main:main"
+
+[project.optional-dependencies]
+xlsx = ["openpyxl"]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.dynamic]
+version = {attr = "main.__version__"}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["main.py"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # flake8-bugbear
+    "A",    # flake8-builtins
+    "S",    # flake8-bandit
+    "T20",  # flake8-print
+    "SIM",  # flake8-simplify
+    "RUF",  # ruff-specific rules
+]
+ignore = [
+    "T201",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["main"]
+
+[tool.ty.environment]
+python-version = "3.10"
