@@ -1,0 +1,11 @@
+LICENSE
+README.md
+main.py
+pyproject.toml
+pilllows_uploader.egg-info/PKG-INFO
+pilllows_uploader.egg-info/SOURCES.txt
+pilllows_uploader.egg-info/dependency_links.txt
+pilllows_uploader.egg-info/entry_points.txt
+pilllows_uploader.egg-info/requires.txt
+pilllows_uploader.egg-info/top_level.txt
+tests/test_upload.py

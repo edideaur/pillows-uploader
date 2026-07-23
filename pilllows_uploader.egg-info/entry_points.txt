@@ -1,0 +1,2 @@
+[console_scripts]
+pillows-upload = main:main

@@ -25,9 +25,8 @@ build-backend = "setuptools.build_meta"
 [tool.setuptools.dynamic]
 version = {attr = "main.__version__"}
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["main.py"]
+[tool.setuptools]
+py-modules = ["main"]
 
 [tool.ruff]
 target-version = "py310"

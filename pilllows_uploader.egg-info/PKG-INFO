@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: pilllows-uploader
+Version: 0.1.0
+Summary: Bulk upload files to pillows.su via the chunked upload API
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: requests>=2.28.0
+Requires-Dist: tqdm>=4.66.0
+Requires-Dist: tomli>=1.0.0; python_version < "3.11"
+Provides-Extra: xlsx
+Requires-Dist: openpyxl; extra == "xlsx"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Dynamic: license-file
